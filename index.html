@@ -26,7 +26,7 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
   </div>
 </div>
 
-<div class="feature__wrapper" style="margin-top: 3rem;">
+<div class="feature__wrapper featured-content-section" style="margin-top: 3rem;">
   <h2 class="archive__subtitle">Featured Content</h2>
   <div class="feature__items">
     
@@ -81,19 +81,20 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
 </div>
 
 <style>
-.feature__items {
+/* Featured Content Section - Responsive Styles Only */
+.featured-content-section .feature__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
   margin-top: 2rem;
 }
 
-.feature__item {
+.featured-content-section .feature__item {
   display: block;
   min-width: 0;
 }
 
-.archive__item {
+.featured-content-section .archive__item {
   display: block;
   text-decoration: none;
   color: inherit;
@@ -101,62 +102,100 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
   width: 100%;
 }
 
-.archive__item:hover {
+.featured-content-section .archive__item:hover {
   transform: translateY(-5px);
   text-decoration: none;
 }
 
-.archive__item-teaser {
+.featured-content-section .archive__item-teaser {
   margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.archive__item-body {
+.featured-content-section .archive__item-teaser > div {
+  height: clamp(150px, 20vw, 220px);
+}
+
+.featured-content-section .archive__item-body {
   padding: 0.5rem 0;
   width: 100%;
 }
 
-.archive__item-title {
+.featured-content-section .archive__item-title {
   margin: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: bold;
   line-height: 1.4;
   width: 100%;
   display: block;
-  /* Prevent breaking in middle of words - only break at word boundaries */
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: manual;
-  /* Allow wrapping but only at proper word boundaries */
   white-space: normal;
-  /* Ensure proper spacing */
   letter-spacing: 0.01em;
 }
 
-.archive__item-excerpt {
+.featured-content-section .archive__item-excerpt {
   margin-top: 0.5rem;
   color: #666;
   line-height: 1.6;
   width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
-.archive__item-excerpt p {
+.featured-content-section .archive__item-excerpt p {
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-@media (max-width: 768px) {
-  .feature__items {
+/* Large screens (desktop) - 3 columns - Featured Content Only */
+@media (min-width: 1200px) {
+  .featured-content-section .feature__items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Medium screens (tablet) - 2 columns - Featured Content Only */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .featured-content-section .feature__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Small screens (mobile) - 1 column - Featured Content Only */
+@media (max-width: 767px) {
+  .featured-content-section .feature__items {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
-  .archive__item-title {
+  .featured-content-section .archive__item-title {
     font-size: 1.3rem;
+  }
+  
+  .featured-content-section .archive__item-teaser > div {
+    height: 180px;
+  }
+}
+
+/* Extra small screens - Featured Content Only */
+@media (max-width: 480px) {
+  .featured-content-section .feature__items {
+    gap: 1.25rem;
+  }
+  
+  .featured-content-section .archive__item-title {
+    font-size: 1.2rem;
+  }
+  
+  .featured-content-section .archive__item-teaser > div {
+    height: 160px;
   }
 }
 </style>
