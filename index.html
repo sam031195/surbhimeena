@@ -1,27 +1,69 @@
 ---
-# This is a Jekyll YAML Front Matter block
-# It configures the page
-layout: splash # Uses the 'splash' layout for a full-screen hero effect
+# Jekyll Front Matter for the Home Page
+layout: splash
+permalink: /
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5" # Darkens the image a bit
-  overlay_image: /assets/images/hero-bg.jpg # You will need to upload an image named 'hero-bg.jpg' to a folder named 'assets/images'
+  overlay_filter: "0.5"
+  # Path is relative to the baseurl set in _config.yml
+  overlay_image: /assets/images/hero-bg.jpg 
 excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSIS Candidate @ UW.<br><br>Building reliable AI, scalable data systems, and user-centric products."
-intro:
-  - excerpt: "📍 Seattle, Washington"
 ---
 
-## Recent Projects
+<div class="feature__wrapper">
+  <h2 class="archive__subtitle">Skills & Technical Expertise</h2>
+  <p align="center">
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+    <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-learn" />
+    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL" />
+    <img src="https://img.shields.io/badge/Snowflake-2299EE?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake" />
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java" />
+    <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" />
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+  </p>
+</div>
 
-{% include gallery id="projects" %}
+<div class="feature__wrapper">
+  <h2 class="archive__subtitle">Featured Content</h2>
+  <div class="grid__wrapper">
+    
+    <div class="grid__item">
+      <a href="/projects/" class="feature__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/projects-icon.jpg" alt="Projects Icon" style="max-height: 150px; object-fit: cover;">
+        </div>
+        <h2 class="archive__item-title">Projects</h2>
+        <div class="archive__item-excerpt">
+          <p>LedgerLens (Fintech Copilot), Airbnb Data Warehouse, Flight Analytics Engine.</p>
+        </div>
+      </a>
+    </div>
 
-## Research & Innovations
+    <div class="grid__item">
+      <a href="/research/" class="feature__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/research-icon.jpg" alt="Research Icon" style="max-height: 150px; object-fit: cover;">
+        </div>
+        <h2 class="archive__item-title">Research & AI</h2>
+        <div class="archive__item-excerpt">
+          <p>GNN for Forecasting, Evidence-first RAG, Explainable Supplier Risk Modelling.</p>
+        </div>
+      </a>
+    </div>
 
-### [cite_start]Reliable & Verifiable ML [cite: 23]
-[cite_start]I focus on building reliable AI systems, including work on **Retrieval-Augmented Generation (RAG)** [cite: 33][cite_start], **Graph Neural Networks (GNN)** for risk-aware forecasts [cite: 27][cite_start], and **Explainable AI (SHAP/LIME)** for fairness audits[cite: 43].
-
-## Experience
-
-[cite_start]I have 5+ years of experience in Product Management, owning roadmaps for vendor-compliance and buyer workflows for clients like **TJ Maxx** and **H&M**[cite: 66, 81].
-
-[View Full CV →](/experience/)
+    <div class="grid__item">
+      <a href="/experience/" class="feature__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/experience-icon.jpg" alt="Experience Icon" style="max-height: 150px; object-fit: cover;">
+        </div>
+        <h2 class="archive__item-title">Experience</h2>
+        <div class="archive__item-excerpt">
+          <p>Senior Product Manager at Black Mango (TJ Maxx) and Indian Designs (H&M).</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
