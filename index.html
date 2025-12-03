@@ -54,7 +54,7 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
           </div>
         </div>
         <div class="archive__item-body">
-          <h2 class="archive__item-title">Research & AI</h2>
+          <h2 class="archive__item-title">Research&nbsp;&amp;&nbsp;AI</h2>
           <div class="archive__item-excerpt">
             <p>GNN for Forecasting, Evidence-first RAG, Explainable Supplier Risk Modelling.</p>
           </div>
@@ -83,14 +83,14 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
 <style>
 .feature__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .feature__item {
   display: block;
-  min-width: 0; /* Prevents grid item from overflowing */
+  min-width: 0;
 }
 
 .archive__item {
@@ -115,39 +115,48 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
 .archive__item-body {
   padding: 0.5rem 0;
   width: 100%;
-  min-width: 0; /* Prevents text overflow */
 }
 
 .archive__item-title {
   margin: 0.5rem 0;
   font-size: 1.5rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  text-overflow: unset;
+  font-weight: bold;
+  line-height: 1.4;
   width: 100%;
   display: block;
+  /* Prevent breaking in middle of words - only break at word boundaries */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: manual;
+  /* Allow wrapping but only at proper word boundaries */
+  white-space: normal;
+  /* Ensure proper spacing */
+  letter-spacing: 0.01em;
 }
 
 .archive__item-excerpt {
   margin-top: 0.5rem;
   color: #666;
+  line-height: 1.6;
+  width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  white-space: normal;
-  width: 100%;
 }
 
 .archive__item-excerpt p {
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  white-space: normal;
 }
 
 @media (max-width: 768px) {
   .feature__items {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .archive__item-title {
+    font-size: 1.3rem;
   }
 }
 </style>
