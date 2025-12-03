@@ -90,6 +90,7 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
 
 .feature__item {
   display: block;
+  min-width: 0; /* Prevents grid item from overflowing */
 }
 
 .archive__item {
@@ -97,6 +98,7 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .archive__item:hover {
@@ -112,16 +114,35 @@ excerpt: "Hi, I'm **Surbhi Meena** 👋<br>Product Manager | ML Researcher | MSI
 
 .archive__item-body {
   padding: 0.5rem 0;
+  width: 100%;
+  min-width: 0; /* Prevents text overflow */
 }
 
 .archive__item-title {
   margin: 0.5rem 0;
   font-size: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-overflow: unset;
+  width: 100%;
+  display: block;
 }
 
 .archive__item-excerpt {
   margin-top: 0.5rem;
   color: #666;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;
+}
+
+.archive__item-excerpt p {
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 @media (max-width: 768px) {
