@@ -10,7 +10,7 @@ I'm always open to discussing new opportunities, collaborations, or just connect
 
 ## Connect With Me
 
-* **LinkedIn:** [Connect on LinkedIn](https://linkedin.com/in/your-linkedin-profile)
+* **LinkedIn:** [Connect on LinkedIn](https://www.linkedin.com/in/surbhimeena/)
 * **GitHub:** [View my work](https://github.com/sam031195)
 * **Email:** Feel free to reach out via LinkedIn
 

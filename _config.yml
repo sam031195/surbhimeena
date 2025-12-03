@@ -4,7 +4,6 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "dark" # Use "dark" for a clean, bold look. Try "mint" or "air" for light.
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
 
@@ -44,7 +43,14 @@ footer:
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/your-linkedin-profile" # Replace with your actual link
+      url: "https://www.linkedin.com/in/surbhimeena/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sam031195"
+
+# ------------------------------------
+# 5. FOOTER SETTINGS
+# ------------------------------------
+# Hide copyright text
+footer_text: false
+

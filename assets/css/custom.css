@@ -1,0 +1,33 @@
+/* Hide Feed link */
+a[href*="/feed.xml"],
+a[href*="/feed/"],
+a[title="Subscribe"],
+.page__footer-feed {
+  display: none !important;
+}
+
+/* Hide copyright text in footer - target specific elements */
+.page__footer-copyright,
+footer .page__footer-copyright {
+  display: none !important;
+}
+
+/* Hide copyright paragraph that contains © or Powered by */
+footer p:contains("©"),
+footer p:contains("Powered by"),
+footer p:contains("Jekyll") {
+  display: none !important;
+}
+
+/* Alternative: Hide last paragraph in footer if it's copyright */
+footer .page__footer-copyright p,
+footer > p:last-of-type {
+  display: none !important;
+}
+
+/* Ensure footer links are still visible */
+footer .page__footer-links,
+footer .social-icons,
+footer ul {
+  display: block !important;
+}
